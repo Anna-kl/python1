@@ -6,5 +6,11 @@
 </head>
 <body>
 <h1>Новая страница</h1>
+<ul>
+    {% for post in object_list %}
+    <li><a href="{% url 'detail' post.id %}">
+        {{post.title}}</a></li>
+    {% endfor %}
+</ul>
 </body>
 </html>
